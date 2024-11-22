@@ -12,7 +12,7 @@ def get_meta_title(text):
       return i
 def get_meta_desc(text):
   for i in text.split("\n")[2:]:
-    if len(i)>20:
+    if len(i)>30:
       return i
 
 
