@@ -28,7 +28,7 @@ file_name=st.file_uploader("Upload the File", type=["xlsx"])
 # with col3:
 if st.button("Submit"):
     if file_name is not None:
-    df=pd.read_excel(file_name)
+        df=pd.read_excel(file_name)
 
     df["meta_title"]=df["Unnamed: 2"].apply(lambda x:get_meta_title(x))
     df["meta_desc"]=df["Unnamed: 2"].apply(lambda x:get_meta_desc(x))
