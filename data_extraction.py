@@ -7,11 +7,12 @@ import streamlit as st
 
 
 def get_meta_title(text):
-    return text.split("\n")[0]
-
+  for i in text.split("\n"):
+    if len(i)>20:
+      return i
 def get_meta_desc(text):
-  for i in (text.split("\n")):
-    if "Description" in i:
+  for i in text.split("\n")[2:]:
+    if len(i)>20:
       return i
 
 
