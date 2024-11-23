@@ -17,9 +17,9 @@ def get_meta_desc(text):
 def get_product_type(text):
   splits=text.split("Output:")
   if len(splits)>1:
-    return splits[1]
+    return splits[1].strip()
   else:
-    return splits[0]
+    return splits[0].strip()
 
 st.title("Data Extraction System")
 
